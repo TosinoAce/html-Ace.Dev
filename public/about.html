@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About.Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        .social{
+            margin-right: 20px;
+        }
+        .aside{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 150px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        #aside-img{
+            text-align: center;
+        }
+        .aside > div > h1{
+            font-family: 'Libre Baskerville', serif;
+            text-align: left;
+
+        }
+        .aside > div > ul{
+            list-style: none;
+            font-weight: lighter;
+            padding-top: 10px;
+        }
+        li{
+            margin-top: 10px;
+        }
+        .brand{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 150px;
+            padding-top: 100px;
+            padding-bottom: 70px;
+        }
+        .brand > div > h1{
+            font-family: 'Libre Baskerville', serif;
+            font-size: 50px
+        }
+        .brand > div > p{
+            text-align: left;
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+            padding-left: 60px ;
+            padding-right: 60px;
+        }
+        .img > div > img{
+            height: 120px;
+            width: 180px;
+            padding: 5px;
+            border-radius: 9px;
+        }
+        .me{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 150px;
+            padding-top: 50px;
+            padding-bottom: 70px;
+        }
+        .me > div > img{
+            width: 300px;
+        }
+        .me > div > h1{
+            text-align: right;
+            font-family:'Libre Baskerville', serif;
+            margin-bottom: 10px;
+            padding-bottom: 0px;
+        }
+        .me > div > h6{
+            margin-top: 0px;
+            padding-top: 0px;
+            text-align: right;
+            font-family:'Libre Baskerville', serif;
+            margin-bottom: 30px;
+        }
+        .me > div > p{
+            text-align: right;
+            font-weight: lighter;
+        }
+        .chart{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 150px;
+            padding-top: 90px;
+            padding-bottom: 90px;
+            background-color: rgb(248, 246, 246);
+        }
+        .chart >div > h2{
+            font-family: 'Libre Baskerville', serif;
+        }
+        ol{
+            list-style: none;
+            font-weight: lighter;
+        }
+        .drop {
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: changeImage 25s infinite;
+        }
+
+        @keyframes changeImage {
+            0%, 100% { background-image: url(./images/brand4.png); }
+            33.33% { background-image: url(./images/brand3.webp); }
+            66.66% { background-image: url(./images/brand5.jpg); }
+        }
+        .talent img {
+            transition: transform 0.3s ease;
+        }
+            /* Scale up the image on hover */
+        .talent > div:hover img {
+            transform: scale(1.1); /* You can adjust the scale value to make the image pop more or less */
+        }
+        .talent > div > h1{
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .talent > div > h1::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px; /* Adjust this value to control the underline's distance from text */
+            height: 2px;
+            width: 0;
+            background-color: goldenrod; /* Adjust this value to set the underline color */
+            transition: width 0.3s; /* Adjust the transition time to control the animation speed */
+        }
+        .talent > div > h1:hover::after {
+            width: 100%;
+        }
+        .talent > div > h2{
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .talent > div > h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px; /* Adjust this value to control the underline's distance from text */
+            height: 2px;
+            width: 0;
+            background-color: goldenrod; /* Adjust this value to set the underline color */
+            transition: width 0.3s; /* Adjust the transition time to control the animation speed */
+        }
+        .talent > div > h2:hover::after {
+            width: 100%;
+        }
+        @media (max-width: 1000px){
+            .brand{
+                display: block;
+                padding: 20px;
+            }
+            .me{
+                display: block;
+                padding: 20px;
+            }
+            .me > div > h6{
+                text-align: center;
+                margin-top: 10px
+            }
+            .me > div > p{
+                text-align: center;
+            }
+            .me > div > h1{
+                text-align: center;
+                margin-top: 30px;
+            }
+            .me > div > img{
+                text-align: center;
+                margin-left: 10%;
+            }
+            .aside{
+                display: block;
+                padding: 20px;
+            }
+            .aside > div > h1{
+                text-align: center;
+            }
+            .aside > div > ul{
+                text-align: center;
+            }
+            .brand > div > h1{
+                font-family: 'Libre Baskerville', serif;
+                font-size: 35px
+            }
+            .img {
+                width: 100%; /* Set the width of the container */
+                overflow-y: hidden; /* Enable horizontal scrolling */
+                white-space: nowrap; /* Prevent content from wrapping */
+                position: relative;
+            }
+            .img > img {
+                display: inline-block;
+                white-space: nowrap;
+            }
+            .img::-webkit-scrollbar {
+                height: 2px; /* Set the width of the scrollbar */
+            }
+            .img::-webkit-scrollbar-track {
+                background-color: rgb(247, 246, 246); /* Set the background color of the scrollbar track */
+            }
+            .img::-webkit-scrollbar-thumb {
+                background-color: rgb(73, 72, 72);
+            }
+            .img::-webkit-scrollbar-thumb:hover {
+                background-color: rgb(165, 163, 163) /* Set the color of the scrollbar thumb on hover */
+            }
+            #aside-img > img{
+                width: 300px;
+                margin-bottom: 20px;
+            }
+            .chart{
+                display: block;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="drop">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2">
+        <div class="col-md-3 mb-md-0 text-center">
+          <a href="./home.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="./images/studio.png" alt="Brand-logo" width="80px" />
+          </a>
+        </div>
+        <ul class="nav nav-underline col- col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="./portfolio.html" class="nav-link px-2 link-dark">Portfolio</a></li>
+          <li><a href="./about.html" class="nav-link px-2 link-dark">About</a></li>
+          <li><a href="./contact.html" class="nav-link px-2 link-dark fw-bold">Contact.Me</a></li>
+        </ul>
+        <div class="col-md-3 text-center">
+            <a href="https://twitter.com/Ace_nailedit"><img class="social" src="./images/i.fi-social-twitter.svg" alt="twitter"/></a>
+            <a href="https://www.instagram.com/ace.nailedit/"><img class="social" src="./images/svg.feather.svg" alt="instagram"/></a>
+            <a href="https://www.linkedin.com/in/oluwatosin-joseph-476307281/"><img class="social" src="./images/i.fi-social-linkedin.svg" alt="linkedin"/></a>
+        </div>
+    </header>
+    <div class="brand talent">
+        <div>
+            <h1>The Brand.</h1>
+            <p>
+                Represents Óluwátósìn, Building the web with a perfect blend of design and code.
+                Transforming ideas into captivating user experiences. Proficient in HTML, CSS, JS, and responsive design.
+            </p>
+        </div>
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+            <img src="./images/studio.png" />
+        </div>
+    </div>
+    <hr>
+    </div>
+    <div class="me talent">
+        <div>
+            <img src="./images/profile.png" />
+        </div>
+        <div>
+            <h1>About Me.</h1>
+            <h6>I Am a Frontend Developer based in the Busy city of Lagos, Nigeria.</h6>
+            <p>Started my Web development Journey 2023, I enjoy bringing Beautiful and Intuitive Designs to life with clean and seamless codes. when am not opening/closing tags, You will find Me Cooking, Watching Movies, Playing Candy Crush. </p>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="width: 90%;">
+            <hr>
+        </div>
+    </div>
+    <div class="img-container">
+        <div class="img talent">
+            <div><img src="./images/chess.jpg" /></div>
+            <div><img src="./images/cooking.jpeg" /></div>
+            <div><img src="./images/work.jpeg" /></div>
+            <div><img src="./images/movies.webp" /></div>
+            <div><img src="./images/Candy Crush.jpg" /></div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="width: 90%;">
+            <hr>
+        </div>
+    </div>
+    <div class="chart talent">
+        <div>
+            <h2>Part Developer.</h2>
+            <ol>
+                <li>Frontend Development.</li>
+                <li>HTML.</li>
+                <li>CSS.</li>
+                <li>Java Script.</li>
+                <li>React.</li>
+                <li>Making it Clean and Seamless.</li>
+            </ol>
+        </div>
+        <div>
+            <img src="./images/pie chart1.png" width="350px" alt="pie Chart"/>
+        </div>
+        <div>
+            <h2 style="text-align: right;">Part Designer.</h2>
+            <ol style="text-align: right;">
+                <li>UI ( Kinda ).</li>
+                <li>UX ( Maybe a little ).</li>
+                <li>Make use of Canva.</li>
+                <li>That's All.</li>
+            </ol>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="width: 90%;">
+            <hr>
+        </div>
+    </div>
+    <section class="aside talent">
+        <div id="aside-img">
+            <img src="./images/about.png" alt="things i do aside coding" width="400px"/>
+        </div>
+        <div>
+            <h1>Random Facts.</h1>
+            <ul>
+                <li>I Listen to a Lot of Music.</li>
+                <li>I Love Clean & Tidy.</li>
+                <li>I Love to cook (and eat).</li>
+                <li>Love football(Manchester United is My Club).</li>
+                <li>kinda Addicted to Twitter.</li>
+                <li>Am a Nail technician.</li>
+                <li>A Librarian by Study.</li>
+                <li>Ronaldo is My Role Model (G.O.A.T).</li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <footer class=" my-2">
+          <ul class="nav nav-underline justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="./portfolio.html" class="nav-link px-2 text-body-secondary">Portfolio</a></li>
+            <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">Contact.me</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2023 Ace.Dev</p>
+        </footer>
+    </div>
+</body>
+</html>

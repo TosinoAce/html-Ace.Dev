@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+            color: rgb(211, 209, 209);
+        }
+         .social{
+            margin-right: 20px;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .port{
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            text-align: center;
+        }
+        .port > div >h1{
+            font-family: 'Libre Baskerville', serif;
+            font-size: 60px;
+            text-align: right;
+        }
+        .port > div > h4{
+            text-align: right;
+            font-weight: lighter
+        }
+        .port > div >p{
+            text-align: right;
+            font-weight: lighter;
+        }
+        .port > div > img{
+            text-align: left;
+        }
+        .moving-text-container {
+            position: relative;
+            width: 100%;
+            height: 180px; /* Adjust the height as needed */
+            overflow: hidden;
+        }
+        .moving-text {
+            color:  rgb(211, 209, 209);
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 150px;
+            position: absolute;
+            top: 0;
+            left: 20%; /* Start the text outside of the container */
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden;
+            animation: moveText 25s linear infinite; /* Adjust animation duration as needed */
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .moving-text2 {
+            color:  rgb(211, 209, 209);
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 150px;
+            position: absolute;
+            top: 0;
+            left: 20%; /* Start the text outside of the container */
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden;
+            animation: moveText2 25s linear infinite; /* Adjust animation duration as needed */
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .moving-text:hover{
+            color: goldenrod;
+        }
+        .moving-text2:hover{
+            color: goldenrod;
+        }
+        @keyframes moveText {
+            0% {
+                 transform: translateX(0%);
+            }
+            100% {
+                  transform: translateX(-100%); /* Move the text to the left of the container */
+            }
+        }
+        @keyframes moveText2 {
+            0% {
+                 transform: translateX(-100%);
+            }
+            100% {
+                  transform: translateX(0%); /* Move the text to the left of the container */
+            }
+        }
+        .talent > div > h1{
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .talent > div > h1::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px; /* Adjust this value to control the underline's distance from text */
+            height: 2px;
+            width: 0;
+            background-color: goldenrod; /* Adjust this value to set the underline color */
+            transition: width 0.3s; /* Adjust the transition time to control the animation speed */
+        }
+        .talent > div > h1:hover::after {
+            width: 100%;
+        }
+        .talent img {
+            transition: transform 0.3s ease;
+        }
+            /* Scale up the image on hover */
+        .talent > div:hover img {
+            transform: scale(1.1); /* You can adjust the scale value to make the image pop more or less */
+        }
+        @media (max-width: 900px ){
+            .port{
+                display: block;
+            }
+            .port > div >img{
+                width: 300px;
+            }
+            .port > div >h1{
+                font-family: 'Libre Baskerville', serif;
+                font-size: 60px;
+                text-align: center;
+            }
+            .port > div > h4{
+            text-align: center;
+            font-weight: lighter
+            }
+            .port > div >p{
+            text-align: center;
+            font-weight: lighter;
+            }
+            .moving-text{
+                font-size: 100px ;
+            }
+            .moving-text2{
+                font-size: 100px;
+            }
+            .moving-text-container{
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2">
+        <div class="col-md-3 mb-md-0 text-center">
+          <a href="./home.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="./images/studio2.png" alt="Brand-logo" width="80px" style="margin-top: 15%;" />
+          </a>
+        </div>
+        <ul class="nav nav-underline col- col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="./portfolio.html" class="nav-link px-2 link-light">Portfolio</a></li>
+          <li><a href="./about.html" class="nav-link px-2 link-light">About</a></li>
+          <li><a href="./contact.html" class="nav-link px-2 link-light fw-bold">Contact.Me</a></li>
+        </ul>
+        <div class="col-md-3 text-center">
+            <a href="https://twitter.com/Ace_nailedit"><img class="social" src="./images/twitter.png" alt="twitter" width="25px"/></a>
+            <a href="https://www.instagram.com/ace.nailedit/"><img class="social" src="./images/instagram.png" alt="instagram" width="25px"/></a>
+            <a href="https://www.linkedin.com/in/oluwatosin-joseph-476307281/"><img class="social" src="./images/linkedin.png" alt="linkedin" width="25px"/></a>
+        </div>
+    </header>
+    <section>
+        <div class="port talent">
+            <div>
+                <h1>Portfolio.</h1>
+                <h4>Check out some of My latest Projects.</h4>
+                <p>Many of my Project are Self created,<br> as I havent been able to work with or for any Entity.<br> I hope these project inspires You to be My first Client/Partner. </p>
+            </div>
+            <div>
+                <img src="./images/splash4.png" alt=" brief display" width="450px" />
+            </div>
+        </div>
+    </section>
+    <section class="disp">
+        <h4 style="font-family: 'Abril Fatface', cursive; text-rendering: optimizeSpeed;">My Self Curated Webpages.</h4>
+    </section>
+    <hr>
+    <div class="moving-text-container">
+        <a href="https://tosinoace.github.io/3tos/"><h2 class="moving-text">3TO'S PROPERTIES, REAL ESTATE PROJECT. (HTML, CSS, BOOTSTRAP, WAS USED.). . .</h2></a>
+    </div>
+    <hr>
+    <div class="moving-text-container">
+        <a href="https://tosinoace.github.io/html-scissorsp/"><h2 class="moving-text2">SCISSORS PLATFORM, URL SHORTENING WEBSITE PROJECT. (HTML, CSS, BOOTSTRAP, WAS USED.). . .</h2></a>
+    </div>
+    <hr>
+    <div class="moving-text-container">
+        <a href="https://tosinoace.github.io/html-AspenMedicals/"><h2 class="moving-text">ASPEN MEDICALS, LANDING PAGE RECREATED & STYLED PROJECT. (HTML, CSS, BOOTSTRAP WAS USED.). . .</h2></a>
+    </div>
+    <div class="moving-text-container">
+        <a href="https://wa.me/+2349028111613"><h2 class="moving-text2">THIS SPACE IS RESERVED FOR YOUR PROJECT, HIRE ME😎. (TOUCH & LET'S CHAT.). . .</h2></a>
+    </div>
+    <hr>
+    <hr>
+    <div class="container">
+        <footer class=" my-4">
+          <ul class="nav nav-underline justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-body-light" style="color: white;">About</a></li>
+            <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-light" style="color: white;">Contact.me</a></li>
+          </ul>
+          <p class="text-center text-body-light">© 2023 Ace.Dev</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.social{
+    margin-right: 20px;
+}
+span{
+    color: goldenrod;
+}
+h3{
+    font-family: 'DM Serif Display', serif;
+}
+.overflow-hidden{
+    max-height: 30vh;
+}
+#phrase{
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+}
+h3 > span{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+h3 > span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust this value to control the underline's distance from text */
+    height: 2px;
+    width: 0;
+    background-color: goldenrod; /* Adjust this value to set the underline color */
+    transition: width 0.3s; /* Adjust the transition time to control the animation speed */
+}
+h3 > span:hover::after {
+    width: 100%;
+}
+.talent img {
+    transition: transform 0.3s ease;
+}
+.talent > div{
+    overflow: hidden;
+}
+/* Scale up the image on hover */
+.talent > div:hover img {
+    transform: scale(1.1); /* You can adjust the scale value to make the image pop more or less */
+}
+@media (max-width: 900px){
+    #logo{
+        width: 60px;
+    }
+}
